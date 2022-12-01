@@ -1,12 +1,10 @@
 jupyter-contrib-nbextensions==0.5.1
-glob==0.7
 pandas==1.4.2
-IPython.display
-beautifulsoup4==4.11.1 
-datetime==0.9.4
+beautifulsoup4==4.11.1
 matplotlib==3.6.2
 tld==0.12.6
 numpy==1.23.5 
 spacy==3.4.3
+https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.4.1/en_core_web_lg-3.4.1.tar.gz
 gensim==4.2.0
 nltk==3.7
