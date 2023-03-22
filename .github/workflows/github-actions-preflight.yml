@@ -13,6 +13,6 @@ jobs:
         with:
           notebook: 'article.ipynb'
           functions: 'checkmd,checkurls'
-          output: 'report.md'
+          output_md: 'report.md'
       - name: Use the github output, if needed
         run: echo "number of cells ${{ steps.preflight.outputs.size }}"
