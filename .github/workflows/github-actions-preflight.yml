@@ -16,3 +16,7 @@ jobs:
           output_md: 'report.md'
       - name: Use the github output, if needed
         run: echo "number of cells ${{ steps.preflight.outputs.size }}"
+      - name: commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          file_pattern: '*.md'
