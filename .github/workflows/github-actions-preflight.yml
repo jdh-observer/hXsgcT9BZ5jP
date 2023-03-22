@@ -1,4 +1,5 @@
 on: [pull_request,workflow_dispatch]
+name: GitHub Actions Ipynb for preflight checks
 jobs:
   preflight:
     runs-on: ubuntu-latest
