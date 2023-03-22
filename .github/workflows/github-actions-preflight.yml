@@ -1,0 +1,17 @@
+on: [pull_request,workflow_dispatch]
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    name: Run preflight checks
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v3
+      - name: Run preflight checks
+        id: preflight
+        uses: c2dh/journal-of-digital-history-ipynb-preflight-action@master
+        with:
+          notebook: 'article.ipynb'
+          functions: 'checkmd,checkurls'
+          output: 'report.md'
+      - name: Use the github output, if needed
+        run: echo "number of cells ${{ steps.preflight.outputs.size }}"
