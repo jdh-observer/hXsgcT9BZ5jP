@@ -38,6 +38,8 @@ To unlock and make available political web defacements for research, their archi
 <!-- #endregion -->
 
 ## Introduction
+
+
 Web defacements in the context of this article are alterations or replacements of websites by an unauthorized third party. This unauthorized access is usually achieved through compromising the target system (here very broadly named hacking). Of the thousands of websites defaced every day, some are defaced for the purpose of propagating political expression of whatever quality, while others are defaced as part of a campaign to disrupt the digital communication channels of a perceived enemy. Both of these types of defacements are broadly labeled political and are what this article focuses on.
 Specifically for the context of this article, engagement with public discourse, introduction of material into public discourse and online commemoration of events in defacements were in focus. These web defacements are part of the larger realm of hacktivist and web defacement practices. As defaced pages are generally short-lived, research cannot rely on larger, unspecified Internet archiving services to obtain copies, nor can it follow events in real time. Where web defacements are preserved, it is in community-maintained archives of varying scope and quality. One of these community archives was Attrition.org, which archived selected web defacements from 1995 until 2001. The research objective of this article is therefore to present a workflow for the stabilization of web defacements as an academic resource and provide methods for the investigation of large collections of web pages with a focus on the specificities of defacements.
 
@@ -55,6 +57,8 @@ Implied in this advocacy for unlocking web defacements is the delivery of a meta
 
 
 ## Context and definitions
+
+
 Political web defacements are situated within the larger context of hacktivism. Hacktivism as a political phenomenon has first been described in the context of the 1999 Kosovo War. (<cite data-cite="1878900/5CXFETZJ"></cite>)  For the context of this article, Alexandra Samuels provides a comprehensive definition of the larger field of hacktivism and political web defacements: 
 
 >[hacktivism is defined as] the nonviolent use of illegal or legally ambiguous digital tools in pursuit of political ends. These tools include web site defacements, redirects, denial-of-service attacks, information theft, web site parodies, virtual sit-ins, virtual sabotage, and software development. (<cite data-cite="1878900/W9UM4VQS"></cite>) 
@@ -66,6 +70,8 @@ The defacements discussed in this article offer a rare insight into the hacktivi
 
 
 ### Data sources
+
+
 Most data sources on defacements have already disappeared from the Web. Alexandra Samuel in her 2014 dissertation finds that 
 
 >Thanks to the volume of defacements, the biggest mirrors (Attrition and alldas) have stopped archiving defacements. alldas has gone offline entirely; Attrition stopped maintaining its archive in April 2001 [...] but has preserved its records of defacements from 1995-2001. (<cite data-cite="1878900/W9UM4VQS"></cite>)
@@ -83,6 +89,8 @@ Attrition stands out from the remaining defacement archives in that it explicitl
 
 
 ### Ethical considerations
+
+
 There are substantial ethical considerations when examining hacktivist materials. Research on and with hacktivist material is going to be research on the fringes of the Internet, as the content is only accidentally captured by means of web archiving, if not captured by dedicated archives. Thus, this study offers the opportunity to include little or unheard voices and perspectives into the historical record of the web. Ian Milligan describes the challenge and potential of using abandoned or ownerless web material:
 
 >I feel similarly uncomfortable with leaving the voices of everyday people completely outside the historical record when there is ample opportunity to include them. Moving to a full opt-in process [referring to Geocities accounts] would likely lead to the historical record being dominated by corporations, celebrities and other powerful people, tech males, and those wanted their public face and history to be seen a particular way. (<cite data-cite="1878900/2CGIGYSL"></cite>)
@@ -106,6 +114,7 @@ It is at this point necessary to explain important differences between using dat
 
 ## Approach and Workflow
 
+
 ```python tags=["figure-flowchart-of-the-workflow-*"]
 from IPython.display import Image 
 metadata={
@@ -123,6 +132,7 @@ display(Image("media/flowchart.png", width=1000), metadata=metadata)
 ```
 
 ### Introduction
+
 
 The goal of this article is to contextualize and unlock political web defacements for research. To achieve this goal, three distinct steps are necessary:
 
@@ -143,6 +153,8 @@ Web defacements might spread more than political ideology. Either knowingly or u
 
 <!-- #region -->
 ### Reading all Files
+
+
 Some pages in the Attrition archive are not a mirror of the defaced page, but a simple page offering “more info on this hack”, with a link to the actual defacement. Because this phrase would skew results, it is filtered out at a later stage. Where multiple pages were defaced using the same template (a tactic known as mass defacement), Attrition would sometimes provide a separate page with all defaced URLs. These pages also needed to be filtered out through stopwords. 
 
 Again reconstructing the metadata, the date for each defacement is derived from the folder structure using a regular expression similar to the solution for finding URLs. This search result is then converted to a datetime object and can be written to the dataframe. 
@@ -239,6 +251,7 @@ At this point in the processing, the HTML files are parsed as plain text files. 
 
 ### Creating WARC Files
 
+
 So far, the analysis has been working with the downloaded files and folders. For replay in a web archiving solution, WARC files are necessary. This file format is not only included better suited for the preservation of pages, it also allows embedded metadata.
 For this step, it is necessary to go back to the file and folder structure one more time. The [warcit tool](https://github.com/webrecorder/warcit) allows us to easily convert local files and folders to WARC files. 
 As the files are local and do not feature any metadata except what has been reconstructed through the previous section, it is necessary to change the information in the warcinfo section so that the WARC files show the correct harvest date and URL for later use:
@@ -274,6 +287,8 @@ for i in glob.glob('/attrition_analysis/****/**/**/*', recursive = False): #agai
 ```
 
 ### Indexing and First Analysis
+
+
 The output of this second step is a collection of usable WARC files to then replay in a Web archive solution ([SolrWayback](https://github.com/netarchivesuite/solrwayback)).
 Finally, all created WARC files can be indexed through a Solrwayback server. Solrwayback offers advanced search and analysis tools for web archives and also provides us with the ability to easily create derived datasets for further analysis. Indexing a larger number of WARC files through Solrwayback is a lengthy process depending on the hardware used, but once completed, the entire Attrition file collection has become an archive:
 
@@ -562,6 +577,8 @@ This approach is quite common for defacers who choose to maintain a recognizable
 
 
 ### Natural Language Processing and Topic Modeling
+
+
 So far, the analysis of the Attrition archive has been concerned with, firstly, creating the archive and transforming it into a usable format and secondly, the introduction of basic concepts to analyze web defacements as a form of political communication. In these analytical efforts, the approach has been to cross-reference existing material (such as geopolitical events, defacer pseudonyms or known domains). While this approach is an adequate first step in the engagement with defacements as a source of information, it is obviously prone to overlook other, unknown topics within the archive. 
 
 While SolrWayback comes with a range of tools available for the analysis of archived web material - some of which have been used throughout this article - it is not by any means a topic modeling software. This final section will therefore present first steps towards an automated analysis of the corpus, with the goal of identifying previously unknown topic clusters and defacers.
@@ -771,6 +788,8 @@ A model such as the one described in Figure 11 can be a finding help for scholar
 
 
 ## Conclusion
+
+
 Web defacements are an important resource for the study of the history of the web, online communication of political expression, and hacktivist practices. Due to their illicit and unwanted nature, web defacements attract groups and individuals who feel their political opinions are not adequately covered in mainstream media. Additionally, the unexpected appearance of a web defacement communicates its message on a dual layer: By breaking the expected flow of information, the hack exposes vulnerabilities in the compromised system and demonstrates the attacker’s capabilities. Through the embedded content, defacements can deliver messages to previously unreachable audiences. 
 It is also because of this mentioned nature that web defacements usually are short-lived and generally unlikely to become part of large, generalized web archives. While a number of community archives exists, barriers to academic use of web defacements as a resource are the lack of a stable archive and the lack of a conceptual approach. Contextualizing and making accessible archives of web defacements can contribute to a more diverse and complete historical record of the web and fill in gaps. Writing about the digitization process, Milligan attests:
 
@@ -798,6 +817,8 @@ Through the workflow and conceptual approach presented in this article, web defa
 
 <!-- #region tags=["hidden"] -->
 ## Bibliography
+
+
 <div class="cite2c-biblio"></div>
 <!-- #endregion -->
 
