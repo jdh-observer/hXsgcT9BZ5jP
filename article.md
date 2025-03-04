@@ -106,7 +106,7 @@ It is at this point necessary to explain important differences between using dat
 
 ## Approach and Workflow
 
-```python tags=["figure-1-Flowchart-of-the-workflow-*"]
+```python tags=["figure-flowchart-of-the-workflow-*"]
 from IPython.display import Image 
 metadata={
     "jdh": {
@@ -114,7 +114,7 @@ metadata={
         "object": {
             "type":"image",
             "source": [
-                "Figure 1: Distribution of content over time."
+                "Distribution of content over time."
             ]
         }
     }
@@ -282,7 +282,7 @@ In terms of unlocking web defacements, this already is a significant contributio
 Before delving into the specific analysis, it is important to remember just how much the content of this archive is skewed by the collection practices which produced it. To illustrate this, a visualization shows the distribution of material over time:
 
 
-```python tags=["figure-2-Distribution-of-content-over-time-*"]
+```python tags=["figure-distribution-of-content-over-time-*"]
 from IPython.display import Image 
 metadata={
     "jdh": {
@@ -290,7 +290,7 @@ metadata={
         "object": {
             "type":"image",
             "source": [
-                "Figure 1: Distribution of content over time."
+                "Distribution of content over time."
             ]
         }
     }
@@ -305,7 +305,7 @@ Another useful way to visualize the collection is through a link network. This i
 The below graph shows a directed graph of all external link targets, with a minimum of 5 incoming links. The below graph shows the links throughout the entire dataset, irrespective of the date of the website. Clusters are highlighted by the color scheme. Using gephi and VOSviewer, the entire link network can be visualized as an [interactive page](https://app.vosviewer.com/?json=https://raw.githubusercontent.com/jdh-observer/hXsgcT9BZ5jP/main/media/network/VOSviewer-network.json&dark_ui=True):
 
 
-```python tags=["figure-3-Directed-incoming-link-network-of-the-archive-content-size-indicates-number-of-incoming-links-clustered-minimum-connectivity-=-5\"-*"]
+```python tags=["figure-directed-incoming-link-network"]
 from IPython.display import Image 
 metadata={
     "jdh": {
@@ -313,7 +313,7 @@ metadata={
         "object": {
             "type":"image",
             "source": [
-                "Figure 2: Directed incoming link network of the archive content, size indicates number of incoming links, clustered, minimum connectivity = 5"
+                "Directed incoming link network of the archive content, size indicates number of incoming links, clustered, minimum connectivity = 5"
             ]
         }
     }
@@ -326,7 +326,7 @@ This approach is helpful in understanding the collection in multiple ways. First
 - URLs (such as hackernews.com, a hacker news website and magazine, but also web sites of defacers)
 
 
-```python tags=["figure-4-Link-Network-Detail-for-2600.com-*"]
+```python tags=["figure-link-Network-Detail-*"]
 from IPython.display import Image 
 metadata={
     "jdh": {
@@ -334,7 +334,7 @@ metadata={
         "object": {
             "type":"image",
             "source": [
-                "Figure 3: Link network detail for hackernews.com"
+                "Link network detail for hackernews.com"
             ]
         }
     }
@@ -344,7 +344,7 @@ display(Image("media/network/hackernews.png", width=1000), metadata=metadata)
 
 E-Mail addresses, usually left by the attacker. This may seem surprising at first, but giving the administrator a way to learn and prevent further intrusions is a recurring element especially in political hacking. More information on this element can be found in the next section.
 
-```python tags=["figure-4-Link-Network-Detail-for-a-Defacer's-Email-Address-*"]
+```python tags=["figure-Email-Address-*"]
 from IPython.display import Image 
 metadata={
     "jdh": {
@@ -352,7 +352,7 @@ metadata={
         "object": {
             "type":"image",
             "source": [
-                "Figure 3: Link network detail for a defacer's email address"
+                "Link network detail for a defacer's email address"
             ]
         }
     }
@@ -376,7 +376,7 @@ It has been confirmed in literature that web defacers often act in response to g
 
 The result confirms the existence of these keywords in the Attrition archive:
 
-```python tags=["figure-5-Frequencies-for-Keywords-relating-to-the-Kashmir-Conflict-over-Time-*"]
+```python tags=["figure-frequencies-for-Keywords-Time-*"]
 from IPython.display import Image 
 metadata={
     "jdh": {
@@ -384,7 +384,7 @@ metadata={
         "object": {
             "type":"image",
             "source": [
-                "Figure 4: Frequencies for keywords relating to the Kashmir conflict over time"
+                "Frequencies for keywords relating to the Kashmir conflict over time"
             ]
         }
     }
@@ -397,7 +397,7 @@ The results show that all three keywords are present from 1999 on (“India” a
 While the presentation of results is far from ideal - SolrWayback continues the X-Axis into the present despite having no post-2002 material - the real value of this n-gram visualization lies in the connection between the graph and the archived material. Clicking on any data point opens a new window showing all material belonging to the data point. Moreso, the results can be exported to create a derived dataset for further research.
 
 
-```python tags=["figure-6-Exporting-a-derived-Dataset-from-Solrwayback-*"]
+```python tags=["figure-exporting-a-derived-Dataset-from-Solrwayback-*"]
 from IPython.display import Image 
 metadata={
     "jdh": {
@@ -405,7 +405,7 @@ metadata={
         "object": {
             "type":"image",
             "source": [
-                "Figure 5: Exporting a derived dataset from SolrWayback"
+                "Exporting a derived dataset from SolrWayback"
             ]
         }
     }
@@ -426,7 +426,7 @@ One of the characteristics of web defacements is their operation on different la
 Because this distinction is an important part of understanding the different levels on which web defacements operate, the breakdown of target TLDs is important for analysis. Similar to the cluster search, this breakdown is part of SolrWayback’s tool kit:
 
 
-```python tags=["figure-7-Visualization-of-Search-Results-by-Domain-*"]
+```python tags=["figure-visualization-domain-*"]
 from IPython.display import Image 
 metadata={
     "jdh": {
@@ -434,7 +434,7 @@ metadata={
         "object": {
             "type":"image",
             "source": [
-                "Figure 6: Visualization of search results by domain"
+                "Visualization of search results by domain"
             ]
         }
     }
@@ -458,7 +458,7 @@ The underlying problem in further contextualizing defacements is that the origin
 
 To begin, this is the defaced website in playback through SolrWayback:
 
-```python tags=["figure-8-The-defaced-Labour.org.uk-website-*"]
+```python tags=["figure-defaced-labour-*"]
 from IPython.display import Image 
 metadata={
     "jdh": {
@@ -466,7 +466,7 @@ metadata={
         "object": {
             "type":"image",
             "source": [
-                "Figure 7: The defaced Labour.org.uk website"
+                "The defaced Labour.org.uk website"
             ]
         }
     }
@@ -487,7 +487,7 @@ SolrWayback provides an API to easily send queries to the server:
 Using this structure, it is possible to send a query to the Internet Archive to try and retrieve the nearest available snapshot. In this case, the snapshot is dated November 9th, 1996:
 
 
-```python tags=["figure-9-November-1996-Copy-of-the-Labour.org.uk-website-*"]
+```python tags=["figure-november-1996-Copy-of-*"]
 from IPython.display import Image 
 metadata={
     "jdh": {
@@ -495,7 +495,7 @@ metadata={
         "object": {
             "type":"image",
             "source": [
-                "Figure 8: The original website"
+                "The original website"
             ]
         }
     }
@@ -506,7 +506,7 @@ display(Image("media/SWBLabourOrg.png", width=500), metadata=metadata)
 Comparing the two versions, it is confirmed that the defacement is a parody of the original site, mimicking the structure and content of the original. How long this defaced version was online is hard to say, the next available snapshot in the Internet Archive dates to March 1997 and shows a blank page. The next confirmed change in content dates to April 1997, where it appears the site has been taken offline. This example further shows how defacement archives can enrich existing web archives and help fill in gaps in a website’s history. Both the defacement archives as well as the Internet Archive (or any web archive) are complementary sources in this example. This approach can be automated to try and retrieve the closest copy available for every defacement, however it is slow and only recommended in targeted defacements. Where derived datasets are used, and where the retrieval of the original sites is not constrained by bandwidth and access restrictions (such as in the case of a national web archive), this approach may well be automated. 
 
 
-```python tags=["figure-10-Comparison-of-the-two-versions-*"]
+```python tags=["figure-comparison-of-the-two-*"]
 from IPython.display import Image 
 metadata={
     "jdh": {
@@ -514,7 +514,7 @@ metadata={
         "object": {
             "type":"image",
             "source": [
-                "Figure 9: Comparison of the two versions"
+                "Comparison of the two versions"
             ]
         }
     }
@@ -528,7 +528,7 @@ In many cases, including the labour.org.uk defacement, it seems a logical next s
 In the case of the labour.org.uk defacement, the modified link “Hacking to be Heard” (Figure X, bottom right), seems to be a promising indicator towards the identity of the defacer. It is, however, just a link to 2600.com, a Hacking zine still in operation. Using SolrWayback’s link graph function, a network of all sites in the Attrition archive pointing links towards 2600.com can be created:
 
 
-```python tags=["figure-11-Link-Network-relating-to-2600.com-*"]
+```python tags=["figure-link-Network-relating-*"]
 from IPython.display import Image 
 metadata={
     "jdh": {
@@ -536,7 +536,7 @@ metadata={
         "object": {
             "type":"image",
             "source": [
-                "Figure 10: Link network relating to 2600.com"
+                "Link network relating to 2600.com"
             ]
         }
     }
@@ -750,7 +750,7 @@ vis = pyLDAvis.gensim_models.prepare(lda_model, corpus, dictionary=lda_model.id2
 vis
 ```
 
-```python tags=["figure-12-Lda-Model-with-10-topics-based-on-entire-corpus-*"]
+```python tags=["figure-Lda-Model-with-10-topics-based-*"]
 from IPython.display import Image 
 metadata={
     "jdh": {
@@ -758,7 +758,7 @@ metadata={
         "object": {
             "type":"image",
             "source": [
-                "Figure 11: lda model with 10 topics based on the whole corpus"
+                "lda model with 10 topics based on the whole corpus"
             ]
         }
     }
