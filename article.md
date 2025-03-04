@@ -17,8 +17,15 @@ jupyter:
 # Contextualizing and unlocking political web defacements for research
 <!-- #endregion -->
 
-cc-by ©. Published by De Gruyter in cooperation with the University of Luxembourg Centre for Contemporary and Digital History. This is an Open Access article distributed under the terms of the Creative Commons Attribution License CC-BY
+<!-- #region tags=["contributor"] -->
+###  Michael Kurzmeier [![orcid](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0003-4925-5197)
+Austrian Centre for Digital Humanities and Cultural Heritage
+<!-- #endregion -->
 
+<!-- #region tags=["copyright"] -->
+[![cc-by](https://licensebuttons.net/l/by/4.0/88x31.png)](https://creativecommons.org/licenses/by/4.0/)
+© Michael Kurzmeier. Published by De Gruyter in cooperation with the University of Luxembourg Centre for Contemporary and Digital History. This is an Open Access article distributed under the terms of the [Creative Commons Attribution License CC-BY](https://creativecommons.org/licenses/by/4.0/)
+<!-- #endregion -->
 
 <!-- #region tags=["keywords"] -->
 Defacement, Hacking, Archive, NLP, Topic Modeling
