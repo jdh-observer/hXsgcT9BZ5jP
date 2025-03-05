@@ -768,7 +768,7 @@ vis
 ```
 
 ```python tags=["figure-13"]
-from IPython.display import Image 
+from IPython.display import IFrame
 metadata={
     "jdh": {
         "module": "object",
@@ -780,10 +780,10 @@ metadata={
         }
     }
 }
-display(Image("media/lda10.png", width=1000), metadata=metadata)
+display(IFrame('ldavis_prepared_10.html', width='100%', height='700'), metadata=metadata)
 ```
 
-[Link to full model notebook](https://github.com/jdh-observer/hXsgcT9BZ5jP/blob/main/script/ldavis_prepared_10.html) The lda model with 10 topics created using standard parameters shows further insight into the topic clusters found in the Attrition.org defacement archive. The results confirm the presence of defacements mentioning the Kashmir conflict (see the selected topic 8 in Figure 11), and also indicate further topics such as "israel", "muslims" and "palestine". While the model was created with mostly default parameters, it becomes apparent that the multi-layered communication found in defacements is also reflected in the most relevant terms; while "israel", "kosovo" and "iraq" indicate political context, terms like "admin" and "own3d" indicate messages relating to hacking itself. Web defacements, including political web defacements, often feature separate elements to introduce the hacker, send a message and explain relations to other hacker groups.
+The lda model with 10 topics created using standard parameters shows further insight into the topic clusters found in the Attrition.org defacement archive. The results confirm the presence of defacements mentioning the Kashmir conflict (see the selected topic 8 in Figure 11), and also indicate further topics such as "israel", "muslims" and "palestine". While the model was created with mostly default parameters, it becomes apparent that the multi-layered communication found in defacements is also reflected in the most relevant terms; while "israel", "kosovo" and "iraq" indicate political context, terms like "admin" and "own3d" indicate messages relating to hacking itself. Web defacements, including political web defacements, often feature separate elements to introduce the hacker, send a message and explain relations to other hacker groups.
 A model such as the one described in Figure 11 can be a finding help for scholars looking to gain an overview of the topic distribution in a larger collection of web defacements. The model can also help justify the selection of single or collections of pages in derived datasets for further research. Finally, the model provides a significant extension of the search and analysis functionality provided by SolrWayback and thus complements the overall workflow.
 
 
