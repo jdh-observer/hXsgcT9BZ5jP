@@ -6,7 +6,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.16.7
+      jupytext_version: 1.16.6
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -821,7 +821,3 @@ Through the workflow and conceptual approach presented in this article, web defa
 
 <div class="cite2c-biblio"></div>
 <!-- #endregion -->
-
-```python
-
-```
