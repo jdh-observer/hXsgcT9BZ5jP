@@ -271,7 +271,7 @@ To process all files, a separate script is necessary which calls the â€œwarcitâ€
 
     warcit -o --fixed-dt {date} {fixed URL} {local path})
 
-This is passed on to the system and the output is recorded. This length process produces 14,133 warc.gz files and allows the analysis to leave the file and folder structure behind. Through this first step of the workflow, metadata has been reconstructed from the folder structure including date and target URL. This approach deliberately avoided metadata later added by attrition (such as motivation or single/mass defacement), but instead derived its descriptive metadata from the files themselves. The output of this first step so far is a collection of WARC files with embedded metadata in the warcinfo section, and a dataframe containing metadata and extracted HTML content.
+is passed on to the system and the output is recorded. This length process produces 14,133 warc.gz files and allows the analysis to leave the file and folder structure behind. Through this first step of the workflow, metadata has been reconstructed from the folder structure including date and target URL. This approach deliberately avoided metadata later added by attrition (such as motivation or single/mass defacement), but instead derived its descriptive metadata from the files themselves. The output of this first step so far is a collection of WARC files with embedded metadata in the warcinfo section, and a dataframe containing metadata and extracted HTML content.
 
 
 ```python tags=["hermeneutics"]
