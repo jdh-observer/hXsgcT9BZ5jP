@@ -19,7 +19,7 @@ jupyter:
 
 <!-- #region tags=["contributor"] -->
 ###  Michael Kurzmeier [![orcid](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0003-4925-5197)
-Austrian Centre for Digital Humanities and Cultural Heritage
+DARIAH EU
 <!-- #endregion -->
 
 <!-- #region tags=["copyright"] -->
