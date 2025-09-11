@@ -814,7 +814,3 @@ Through the workflow and conceptual approach presented in this article, web defa
 
 <div class="cite2c-biblio"></div>
 <!-- #endregion -->
-
-```python
-
-```
